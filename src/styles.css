@@ -1,66 +1,121 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import 'normalize.css';
 
-:root {
-    --dark_green: #2c3421;
-    --light_green: #9ba094;
-    --fog: #d8e1f2;
-}
-
-body{
-    display:flex;
-    flex-wrap: wrap;
-    font-family: 'Work Sans', sans-serif;
-    box-sizing: border-box;
-    color: var(--dark_green);
-}
-.c1, .rightContainer{
-    width: 100%;
-}
-
-.c1{
-    background-image: url(images/Fog2.jpg);
-    display: flex;
-    align-items:center;
-    justify-content: center;
-}
-.leftImage, {
-    position: absolute;
-}
-.overlayText {
-    color: var(--fog);
-    text-transform: uppercase;
-}
-button, input{
-    border: none;
-    background-color: var(--fog);
-}
-.rightContainer{
-    flex-direction: column;
-}
-
-.c2,.c3,.c4,.c5{
-    padding: 1rem;
-}
-/* Mobile Styles */
-@media only screen and (max-width: 450px) {
-    .c1 {
-        height: 30vh;
-        width: 100vw;
-        background-size:cover;
+/* Color palette */
+    :root {
+        --dark_green: #2c3421;
+        --light_green: #9ba094;
+        --lighter_green: #c3c6bf;
+        --fog: #d8e1f2;
+        --dark_fog: #adb4c2;
+        --light_fog: rgba(216, 225, 242,0.5)
     }
-  }
-/* Desktop + Tablet Styles */
-@media only screen and (min-width: 451px) {
-    body {
-        background-color: var(--light_green);
+
+/* Basic Design components */
+    body{
+        display:flex;
+        flex-wrap: wrap;
+        font-family: 'Work Sans', sans-serif;
+        box-sizing: border-box;
+        color: var(--light_green);
+        color: var(--dark_fog);
     }
+/* Image and overlay text */
     .c1{
-        width: 55vw;
-        height: 100vh;
-        background-size:cover;
+        background-image: url(images/Fog2.jpg);
+        display: flex;
+        align-items:center;
+        justify-content: center;
     }
+    .leftImage {
+        /* position: absolute; */
+        z-index: -1;
+    }
+    .cloud{
+        position: absolute;
+        opacity: 20%;
+        max-width: 260px;
+        filter: invert(92%) sepia(2%) saturate(2011%) hue-rotate(188deg) brightness(99%) contrast(92%);
+    }
+
+    .overlayText {
+        color: var(--fog);
+        text-transform: uppercase;
+        z-index: 1; 
+    }
+
+/* Main text and form styling */
     .rightContainer{
-        width: 45vw;
+        flex-direction: column;
     }
-}
+    .headerText{
+        padding: 2rem;
+        color: var(--light_green);
+        color: var(--dark_fog);
+    }
+    .headerText, button{
+        font-size: 1.125rem;
+    }
+    form{
+        background-color: var(--light_fog);
+        font-size: .875rem;
+        display: flex;
+        flex-direction: column;
+        /* flex-wrap: none; */
+    }
+    input, label {
+        display: flex;
+        flex-direction: column;
+    }
+    .row1, .row2, .row3{
+        display: flex;
+        flex-direction: column;
+    }
+    input{
+        border: 1px solid white;
+        border-radius: 3px;
+        /* width: 40%; */
+    }
+    button, input{
+        border: none;
+        color: var(--light_green);
+        background-color: var(--fog);
+    }
+ 
+    button {
+        padding: .75rem 2rem;
+        color: white;
+    }
+    a{
+        color: var(--fog);
+    }
+
+    .c2,.c3,.c4,.c5{
+        padding: 1rem 2rem;
+    }
+  
+
+
+/* Responsive Design components */
+    .c1, .rightContainer{
+        width: 100%;
+    }
+    /* Mobile Styles */
+    @media only screen and (max-width: 450px) {
+        .c1 {
+            height: 40vh;
+            width: 100vw;
+            background-size:cover;
+        }
+    }
+    /* Desktop + Tablet Styles */
+    @media only screen and (min-width: 451px) {
+        .c1{
+            width: 55vw;
+            height: 100vh;
+            background-size:cover;
+        }
+        .rightContainer{
+            width: 45vw;
+        }
+    }
