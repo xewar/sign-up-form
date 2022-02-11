@@ -9,6 +9,8 @@
         --fog: #d8e1f2;
         --dark_fog: #adb4c2;
         --light_fog: rgba(216, 225, 242,0.5)
+        /* colors: https://maketintsandshades.com/#374129 */
+                /* https://maketintsandshades.com/#d8e1f2 */
     }
 
 /* Basic Design components */
@@ -17,7 +19,6 @@
         flex-wrap: wrap;
         font-family: 'Work Sans', sans-serif;
         box-sizing: border-box;
-        color: var(--light_green);
         color: var(--dark_fog);
     }
 /* Image and overlay text */
@@ -45,54 +46,77 @@
     }
 
 /* Main text and form styling */
+    .c2, .c5{
+        padding: 1rem 2rem;
+    }
+    .c4{
+        padding: 0 2rem .5rem;
+    }
     .rightContainer{
         flex-direction: column;
     }
     .headerText{
-        padding: 2rem;
         color: var(--light_green);
         color: var(--dark_fog);
     }
     .headerText, button{
         font-size: 1.125rem;
     }
+  
     form{
-        background-color: var(--light_fog);
         font-size: .875rem;
         display: flex;
         flex-direction: column;
-        /* flex-wrap: none; */
+    }
+    .topPart{
+        background-color: var(--light_fog);
+        padding: 2rem;
     }
     input, label {
         display: flex;
-        flex-direction: column;
-    }
-    .row1, .row2, .row3{
-        display: flex;
-        flex-direction: column;
+        width: 100%;
     }
     input{
         border: 1px solid white;
+        /* border: none; */
         border-radius: 3px;
-        /* width: 40%; */
+        /* box-shadow: inset .25px .25px .25px .25px var(--dark_fog); */
+        color: var(--dark_fog);
     }
-    button, input{
+    #error{
+        padding: 1rem 2rem;
+        font-style: italic;
+    }
+    small{
+        visibility: hidden;
+    }
+    .success input {
+        border: 1px solid var(--fog);
+    }
+
+    .error input {
+        border: 2px solid var(--dark_fog);
+    }
+    .error small{
+        visibility: visible;
+    }
+
+    .asterisk{
+        font-style: bold;
+    }
+    button{
         border: none;
         color: var(--light_green);
         background-color: var(--fog);
-    }
- 
-    button {
         padding: .75rem 2rem;
+        margin-top: 1rem;
         color: white;
     }
+    
     a{
         color: var(--fog);
     }
 
-    .c2,.c3,.c4,.c5{
-        padding: 1rem 2rem;
-    }
   
 
 
@@ -101,15 +125,72 @@
         width: 100%;
     }
     /* Mobile Styles */
-    @media only screen and (max-width: 450px) {
+    @media only screen and (max-width: 750px) {
         .c1 {
             height: 40vh;
             width: 100vw;
             background-size:cover;
         }
+        .cell{
+            display: flex;
+            flex-direction: column;
+            padding: .5rem 0;
+            gap: 5px;
+        }
+        .errorMessage{
+            padding-top:5px;
+        }
     }
-    /* Desktop + Tablet Styles */
-    @media only screen and (min-width: 451px) {
+
+    /* TabletStyles */
+    @media only screen and (min-width: 751px) and (max-width: 960px) {
+       /* body{
+           box-sizing: border-box;
+       } */
+        .c1 {
+            height: 40vh;
+            width: 100vw;
+            background-size:cover;
+        }
+       .rightContainer{
+           display: flex;
+           flex-direction: row;
+           flex-wrap: wrap;
+           justify-content: space-between;
+       }
+       .headerText{
+           width: 35vw;
+           margin: 0;
+           font-size: 1rem;
+           /* padding: 0; */
+       }
+       .tabletRight{
+        width: 55vw;   
+        }
+        /* .c2, .c5 {
+            padding: 4%;
+        } */
+
+        
+        .cell{
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+            padding-bottom: 1rem;
+        }
+        .row1, .row2, .row3{
+            display: flex;
+            font-size: 13px;
+            flex-direction: row;
+            align-items: end;
+            gap: 8%;
+            padding: .5rem 0;
+        }
+    }
+
+    /* Desktop Styles */
+    @media only screen and (min-width: 961px) {
         .c1{
             width: 55vw;
             height: 100vh;
@@ -117,5 +198,17 @@
         }
         .rightContainer{
             width: 45vw;
+        }
+        .cell{
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+        }
+        .row1, .row2, .row3{
+            display: flex;
+            flex-direction: row;
+            gap: 8%;
+            padding: .5rem 0;
         }
     }
