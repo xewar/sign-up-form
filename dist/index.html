@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ɛbɔ club</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="main.js"></script>
+</head>
+<body>
+    <div class="c1">
+        <div class="leftImage"  alt="A photo of Puracé Volcano covered in fog."></div>
+        <div class="overlayText">Coconuco, Colombia</div>
+        <object class="cloud" data="../src/images/cloud.svg" alt="An icon of a cloud"></object>
+    </div>
+    <div class="rightContainer">
+        <div class="c2 headerText">
+            <p>This is a dummy sign-up page for a club celebrating the month of fog.
+                The purpose of this project was to practice a few concepts in CSS - client-side form validation, responsive design, and others. </p>
+            <p>Sign up here, all are welcome.</p>
+        </div>
+        
+        <div class="tabletRight">
+            <form class="c3 form">
+                <div class="topPart">
+                    <h2>Let's do this!</h2>
+                    <div class="row1">
+                        <div class="cell success">
+                            <label for="firstName">First Name<span class = 'asterisk'>*</span></label>
+                            <input type="text" id="firstName" name="firstName">
+                            <small class="errorMessage">Error message</small>
+                        </div>
+                        <div class="cell">
+                            <label for="lastName">Last Name</label>
+                            <input  type="text" id="lastName" name="lastName">
+                            <small class="errorMessage">Error message</small>
+
+                        </div>
+                    </div>
+                    <div class="row2">
+                        <div class="cell">
+                            <label for="userEmail">Email<span class = 'asterisk'>*</span></label>
+                            <input type="email" id="userEmail" name="userEmail">
+                            <small class="errorMessage">Error message</small>
+                        </div>
+                        <div class="cell">
+                            <label for="phoneNumber">Phone Number</label>
+                            <input type="number" id="phoneNumber" name="phoneNumber">
+                            <small class="errorMessage">Error message</small>
+                        </div>
+                    </div>
+                    <div class="row3">
+                        <div class="cell">
+                            <label for="password">Password<span class = 'asterisk'>*</span></label>
+                            <input  type="password" id="password" name="password">
+                            <small class="errorMessage">Error message</small>
+                        </div>
+                        <div class="cell">
+                            <label for="confirmPassword">Confirm Password<span class = 'asterisk'>*</span></label>
+                            <input type="password" id="confirmPassword" name="confirmPassword">
+                            <small class="errorMessage">Error message</small>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div id="error">Example</div> -->
+                <div class="c4 submitButton">
+                    <button type="submit">Create Account</button>
+                </div>
+            </form>
+           
+           
+            <div class="c5 footer">
+                <div>Already have an account? <a href="">Log in</a></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
