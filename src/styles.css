@@ -3,12 +3,10 @@
 
 /* Color palette */
     :root {
-        --dark_green: #2c3421;
-        --light_green: #9ba094;
-        --lighter_green: #c3c6bf;
         --fog: #d8e1f2;
-        --dark_fog: #adb4c2;
-        --light_fog: rgba(216, 225, 242,0.5)
+        /* --dark_fog: #adb4c2; */
+        --dark_fog: #979ea9;
+        --light_fog: rgba(216, 225, 242,0.3)
         /* colors: https://maketintsandshades.com/#374129 */
                 /* https://maketintsandshades.com/#d8e1f2 */
     }
