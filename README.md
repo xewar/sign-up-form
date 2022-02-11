@@ -1,4 +1,4 @@
-# Join a club celebrating the month of fog
+# Sign-up form
 
 [View the live form here.](https://xewar.github.io/sign-up-form/)
 
