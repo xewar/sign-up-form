@@ -35,6 +35,8 @@
     .cloud{
         position: absolute;
         opacity: 20%;
+        height: 500px;
+        width: 260px;
         max-width: 260px;
         filter: invert(92%) sepia(2%) saturate(2011%) hue-rotate(188deg) brightness(99%) contrast(92%);
     }
