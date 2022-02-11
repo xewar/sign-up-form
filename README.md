@@ -1,6 +1,6 @@
 # sign-up-form
 
-[Link to live project]
+[View the live form here](https://xewar.github.io/sign-up-form/)
 
 Working on:
 + Practice creating and customizing forms
