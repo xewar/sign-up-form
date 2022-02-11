@@ -32,6 +32,7 @@
     }
     .cloud{
         position: absolute;
+        z-index: 2;
         opacity: 20%;
         height: 500px;
         width: 260px;
